@@ -1,0 +1,387 @@
+/* ==========================================
+   IMPORT FONT
+========================================== */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #0b2d5e;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   WARNA WEBSITE
+========================================== */
+
+:root{
+    --primary: #0b2d5e;
+    --secondary: #cfe5f8;
+    --cream: #f5f1e8;
+    --white: #ffffff;
+    --shadow: rgba(0,0,0,0.15);
+}
+
+/* ==========================================
+   SMOOTH SCROLL
+========================================== */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+    background-color: var(--cream) !important;
+    padding: 15px 0;
+}
+
+.navbar-brand{
+    color: var(--primary) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-web{
+    height: 120px;
+    width: auto;
+}
+
+.nav-link{
+    color: var(--primary) !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #3f7ccf !important;
+}
+
+.navbar .form-control{
+    border-radius: 10px;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-section{
+    background-color: var(--secondary);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.3;
+}
+
+.hero-section p{
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.hero-section img{
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn-primary{
+    background-color: var(--primary);
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover{
+    transform: translateY(-3px);
+    background-color: #174487;
+}
+
+.btn-light{
+    transition: 0.3s;
+}
+
+.btn-light:hover{
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   JUDUL SECTION
+========================================== */
+
+.section-title{
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* ==========================================
+   CARD PRODUK
+========================================== */
+
+.product-card{
+    border: none;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.product-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.product-card img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h5{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.product-card h4{
+    color: #000;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   KATEGORI PRODUK
+========================================== */
+
+.category-box{
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-box i{
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.category-box:hover{
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   TENTANG KAMI
+========================================== */
+
+section p{
+    line-height: 1.8;
+}
+
+section img{
+    max-width: 100%;
+}
+
+/* ==========================================
+   PROMO CAROUSEL
+========================================== */
+
+.carousel{
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.carousel img{
+    height: 600px;
+    object-fit: cover;
+}
+
+/* ==========================================
+   FORM KONTAK
+========================================== */
+
+#kontak{
+    background-color: var(--secondary) !important;
+}
+
+#kontak .form-control{
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+#kontak .form-control:focus{
+    box-shadow: 0 0 8px rgba(11,45,94,0.3);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background-color: var(--cream);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* ==========================================
+   ANIMASI MUNCUL SAAT LOAD
+========================================== */
+
+.hero-section,
+.product-card,
+.category-box{
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+    .hero-title{
+        font-size: 2.3rem;
+    }
+
+    .carousel img{
+        height: 350px;
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .hero-section{
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 2rem;
+    }
+
+    .product-card img{
+        height: 220px;
+    }
+
+    .carousel img{
+        height: 250px;
+    }
+
+    .navbar .form-control{
+        margin-top: 10px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE KECIL
+========================================== */
+
+@media(max-width:576px){
+
+    .hero-title{
+        font-size: 1.6rem;
+    }
+
+    .section-title{
+        font-size: 1.3rem;
+    }
+
+    .product-card{
+        margin-bottom: 20px;
+    }
+
+}
+
+.logo-web{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+/* ==========================================
+   HALAMAN KATALOG PRODUK
+========================================== */
+
+.katalog-title{
+    background-color: #d8ebfa;
+}
+
+.katalog-title h2{
+    color: #102b57;
+    font-weight: 700;
+}
+
+.kategori-title{
+    color: #102b57;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-left: 5px solid #102b57;
+    padding-left: 10px;
+}
+
+/* Card Produk */
+
+.product-card{
+    border: none;
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.product-card:hover{
+    transform: translateY(-8px);
+}
+
+.product-card img{
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-card h5{
+    color: #102b57;
+    font-weight: 600;
+}
+
+.product-card h4{
+    color: #000;
+    font-size: 20px;
+}
+
+/* Footer */
+
+.footer-section{
+    background-color: #d8ebfa;
+}
